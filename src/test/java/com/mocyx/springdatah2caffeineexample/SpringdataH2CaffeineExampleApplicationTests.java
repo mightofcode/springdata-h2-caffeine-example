@@ -24,6 +24,14 @@ class SpringdataH2CaffeineExampleApplicationTests {
         System.currentTimeMillis();
     }
 
+    @Test
+    void testCache() {
+        for (int i = 0; i < 3; i++) {
+            Object res=studentService.getAll();
+        }
+        System.currentTimeMillis();
+    }
+
 	@Test
 	void contextLoads() {
 		System.currentTimeMillis();
